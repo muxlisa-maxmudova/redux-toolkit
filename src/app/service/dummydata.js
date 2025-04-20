@@ -12,4 +12,4 @@ export const productsApi = createApi({
     }),
 })
 
-export const {useGetAllProductsQuery} = productsApi; //important!
+export const {useGetAllProductQuery} = productsApi; //important!
