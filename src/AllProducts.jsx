@@ -12,9 +12,7 @@ const AllProducts = () => {
     return (
         <div>
             {data?.products.map((product) => (
-                <div key={product.id}>
-                    {product.title}
-                </div>
+                <div key={product.id}>{product.title}</div>
             ))}
         </div>
     )
