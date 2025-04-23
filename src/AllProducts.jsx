@@ -1,8 +1,9 @@
 import React from 'react'
-import {useGetAllProductQuery} from "./app/service/dummydata.js";
+import {useGetAllProductQuery, useGetProductByIdQuery} from "./app/service/dummydata.js";
 
 const AllProducts = () => {
-    const {data, isError, isLoading} = useGetAllProductQuery()
+    const {data, isError, isLoading} = useGetProductByIdQuery(1)
+    console.log(useGetProductByIdQuery(1))
     if (isError){
       return <h1>ERROR</h1>
     }
@@ -11,9 +12,9 @@ const AllProducts = () => {
     }
     return (
         <div>
-            {data?.products.map((product) => (
-                <div key={product.id}>{product.title}</div>
-            ))}
+
+                <div>{data?.title}</div>
+
         </div>
     )
 }
