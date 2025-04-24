@@ -1,5 +1,5 @@
 import React from 'react'
-import {useGetAllProductQuery, useGetProductByIdQuery, useAddNewProductMutation} from "./app/service/dummydata.js";
+import {useGetAllProductQuery, useGetProductByIdQuery} from "./app/service/dummydata.js";
 
 const AllProducts = () => {
     const {data, isError, isLoading} = useGetProductByIdQuery(1)
